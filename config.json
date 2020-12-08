@@ -1,15 +1,17 @@
 {
-    "name": "Mnist_LeNet",
+    "name": "Mitbih_LeNet",
     "n_gpu": 1,
 
     "arch": {
-        "type": "MnistModel",
-        "args": {}
+        "type": "MitbihModel",
+        "args": {
+            "num_classes": 5
+        }
     },
     "data_loader": {
-        "type": "MnistDataLoader",
+        "type": "MitbihDataLoader",
         "args":{
-            "data_dir": "data/",
+            "data_dir": "./data/MIT-BIH/processedData.mat",
             "batch_size": 128,
             "shuffle": true,
             "validation_split": 0.1,
